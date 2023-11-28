@@ -5,3 +5,9 @@ from django.http import HttpResponse
 
 def home(request):
     return render(request,'index.html')
+
+def signup(request):
+    # print(request.GET)
+    print(request.GET['your_name'])
+    print(request.GET['your_email'])
+    return render(request, 'signup.html')
