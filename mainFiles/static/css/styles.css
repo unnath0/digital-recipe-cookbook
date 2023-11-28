@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.one h1{
+  color: rgb(226,226,226);
+  text-shadow: 1px 1px 4px #000;
+}
+
+h1{
+  text-shadow: 1px 1px 4px #000;
+}
+
+.container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;  height: -webkit-fill-available; height: fill-available;
+}
+
+.one{
+  background-color: rgb(36,164,138);
+  position: relative;
+}
+
+.one:before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  background-image: url('../images/recipe-cookbook-title-image.webp');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.main-name{
+  font-size: 100px;
+  position: relative;
+}
+
+.two{
+  background-color: rgb(211,79,79);
+}
+
+.flickity-button {
+  background: transparent;
+}
+
+.whole {
+  height: auto;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 30px;
+}
+
+
+.carousel-cell {
+  height: 200px;
+  width: 300px;
+}
+
+  .carousel-cell img {
+      width: 100%; /* Make the image fill the entire width of the cell */
+      height: auto; /* Maintain the aspect ratio */
+  }
+
+  .carousel-cell h1 {
+      position: absolute;
+      font-size:30px;
+      top: 5px; /* Adjust this value to control the distance from the top */
+      right: 20%; /* Adjust this value to control the distance from the left */
+      text-align: center;
+      color: #fff; /* Set the text color to white */
+      z-index: 1; /* Ensure the text appears above the image */
+      font-weight: 500;
+      text-shadow: -2px -2px 2px #000, 2px -2px 2px #000, -2px 2px 2px #000, 2px 2px 2px #000; /* Black border */
+  }
+
+
+.carousel-cell-main {
+  width: 100%;
+  height: 430px;
+  background: #8C8;
+  border-radius: 5px;
+  /* Add the following styles for horizontal layout */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensures that the image won't exceed the cell boundaries */
+  position: relative; /* Position relative for absolute positioning of text */
+}
+.parent-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+}
+  
+
+/* Style for the left box */
+.left-box {
+  width:30%;
+  height:100%;
+  text-align: center;
+  background: #ff0000;
+}
+
+  .left-box img {
+      max-width: 100%; /* Make sure the image doesn't exceed its container */
+      height:70%;
+  }
+
+/* Style for the middle box */
+.middle-box {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  background: #ffd800;
+  overflow: scroll;
+}
+
+.middle-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style for the right box */
+.right-box {
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  background: #00ff21;
+  overflow: scroll;
+}
+
+.right-box::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Additional styling for h1 and p elements */
+.left-box h1,.middle-box h1,.right-box h1 {
+  margin: 10px 0; /* Adjust the margin as needed */
+}
+
+.left-box p, .middle-box p, .right-box p {
+      margin: 10px 0; /* Adjust the margin as needed */
+  }
+
+.three{
+  background-color: rgb(67,91,175);
+}
+
+#right-side-title{
+  color: rgb(67,91,175);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.ai-recommendation-left{
+  width: 50%;
+  height: 100vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.ai-recommendation-left:before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 1.0;
+  background-image: url('../images/pantry-recipes-2.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.ai-recommendation-right{
+  width: 50%;
+  height: 100vh;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  display: block;
+  /* background-color: rgb(191,64,191); */
+}
+
+.ai-recommendation-right input{
+  display: block;
+  margin: auto;
+  width: 30em;
+  height: 3em;
+  box-shadow: 10px 10px;
+}
+
+.ai-recommendation-right button{
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  max-width: 150px;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.ai-recommendation-right button:disabled {
+  pointer-events: none;
+}
+
+.ai-recommendation-right button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.ai-recommendation-right button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.five{
+  display: flex;
+  flex-direction: column;
+}
+
+.upper-side{
+  width: 80%;
+  height: 100vh;
+  float: left;
+  margin-top: 40px;
+  border: 2px solid rgb(246, 242, 242);
+  box-shadow: 10px 9px 10px mediumvioletred;
+  text-align: center;
+}
+.upper-side h1{
+  padding: 18px;
+  font-size: 2.2vw;
+  font-weight: bolder;
+  text-shadow: 1px 1px 4px #000;
+  align-items: center;
+}
+.down-part{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+:is(.first-box, .second-box, .third-box){
+  width: 20vw;
+  height: auto;
+  float: left;
+  border: 3px solid rgb(251, 249, 249);
+  box-shadow: 10px 9px 10px rgb(189, 140, 171);
+}
+:is(.para1, .para2, .para3){
+  padding: 10px 10px 60px 10px;
+  text-align: left;
+  font-size: 1.2vw;
+}
+:is(.first-box .photo1-section, .second-box .photo2-section, .third-box .photo3-section){
+  float: left;
+  display: flex;
+  flex-direction: row;
+}
+
+:is(.first-box .photo1-section, .second-box .photo2-section, .third-box .photo3-section) img{
+  width: 20px;
+  height: auto;
+  float: left;
+  margin-left: 10px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgb(31, 31, 36);
+}
+
+:is(.first-box .photo1-section, .second-box .photo2-section, .third-box .photo3-section) p{
+  padding-left: 20px;
+  float: left;
+  font-size: 1.4vw;
+}
+
+.lower-side{
+  width: 100vw;
+  height: 50vh;
+  margin-top: 50px;
+  border: 2px solid rgb(235, 229, 229);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 8px 5px 30px rgb(120, 1, 239);
+}
+.left-side {
+  font-size: 2vw;
+  font-weight: bolder;
+  padding-top: 40px;
+  text-shadow: 1px 1px 10px #8d8585;
+  display: flex;
+  flex-direction: column;
+
+}
+.right-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+input[type="email"], textarea{
+  box-shadow: 1px 1px 8px rgb(102, 98, 98);
+  font-size: 1vw;
+  padding: 10px;
+  border: 2px solid #fffafa;
+}
+input[type="submit"], textarea{
+  padding: 5px;
+  font-size: 1vw;
+  border: 2px solid #fffafa;
+  box-shadow: 1px 1px 8px rgb(102, 98, 98);
+}
+.navbar{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+} 
+
+@media screen and (max-width:900px) {
+  .container,.one,.one:before,.main-name,.two,.three,.four,.five,.upper-side,.down-part,.first-box, .second-box, .third-box,.para1, .para2, .para3,.photo1-section,.photo2-section,.photo3-section,.lower-side,.left-side,.right-side,.navbar{
+      width: 100%;
+      float: left;
+  }
+}
