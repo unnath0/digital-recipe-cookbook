@@ -16,6 +16,10 @@ def signup(request):
         print(username)
         print(email)
 
+        # concatenate fname and lname into name
+
+        # create a database if it doesn't exist already using a if block
+
         # mysql query execution using another function which will insert the values into the mysql database
 
         return redirect('home')
