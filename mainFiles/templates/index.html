@@ -1,12 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
     <title>Digital Recipe Book</title>
 </head>
 <body>
@@ -20,10 +20,74 @@
       </div>
     </section>
 
+    <!-- This is the drink section done by alok -->
+    <section class="three">
+        <div class="wholeDrinks">
+            <div class="heading">
+                <h2>BEVERAGERS</h2>
+            </div>
+            <div class="carousel-nav-drinks"
+                data-flickity='{ "asNavFor": ".carousel-main-drinks",
+                "contain": true,
+                "autoPlay": true,
+                "pageDots": false,
+                "wrapAround": true,
+                "groupCells":2 }'>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+                <div class="carousel-cell-drinks"></div>
+            </div>
+    
+    
+            <!-- Flickity HTML init -->
+            <div class="carousel-main-drinks" data-flickity='{"wrapAround": true}'>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+                <div class="carousel-cell-main-drinks"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- This is the horizontal scrolling recipe section which will be done by alok -->
     <section class="two">
         <div class="whole">
-
+            <div class="heading">
+                <h2>CLAY POT COOKERY</h2>
+            </div>
             <div class="carousel-nav"
                  data-flickity='{ "asNavFor": ".carousel-main",
              "contain": true,
@@ -59,98 +123,105 @@
             </div>
         </div>
     </section>
-
+    
     <!-- This is the AI recommendation section which will be done by anand -->
     <section class="four">
-      <div class="ai-recommendation-left"></div>
-      
-      <div class="ai-recommendation-right">
-        <h1 id="right-side-title">Generate Recipe using our AI</h1>
-        <form action="#">
-          <input type="text" name="filter" id="searchTarget" placeholder="Ingredients,cuisine,recipe related name">
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+        <div class="four-page">
+            <div class="ai-recommendation-left">
+                <p lang="en"><q>A recipe has no soul. You as the cook, must give soul to the recipe.</q></p>
+            </div>
+            <div class="ai-recommendation-right">
+                <h1 id="right-side-title">Generate Recipe using our AI</h1>
+                <form action="#">
+                    <input type="text" id ="box" placeholder="Ingredients,cuisine,recipe related name">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
     </section>
     
     <!-- This is the review and footer section which will be done by  akrity-->
     <section class="five">
-      <div class="upper-side">
-          <h1>Your feedback is important to us!</h1>
-          <div class="down-part">
-              <div class="first-box">
-                  <div class="para1">    
-                      <!--  comment section is pending to add comment ,name photo  -->
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet suscipit mollitia tempore sint delectus dolore rerum omnis iusto. Quaerat ex voluptas cupiditate nostrum maxime, velit necessitatibus repellat alias molestias.</p>
-                  </div>
-                  <div class="photo1-section">
-                      <img src="../static/icons/youtube.png" >
-                      <p>Akrity Kumari Gupta</p>
-                  </div>
-              </div>
-              <div class="second-box">
-                  <div class="para2">
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet suscipit mollitia tempore sint delectus dolore rerum omnis iusto. Quaerat ex voluptas cupiditate nostrum maxime, velit necessitatibus repellat alias molestias.</p>
-                  </div>
-                  <div class="photo2-section">
-                      <img src="../static/icons/twitter.png">
-                      <p>Anand S P</p>
-                  </div>
-              </div>
-              <div class="third-box">
-                  <div class="para3">
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet suscipit mollitia tempore sint delectus dolore rerum omnis iusto. Quaerat ex voluptas cupiditate nostrum maxime, velit necessitatibus repellat alias molestias.</p>
-                  </div>
-                  <div class="photo3-section">
-                      <img src="../static/icons/instagram.jpg">
-                      <p>Alok Kumar Maurya</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="lower-side">
-              <div class="left-side">
-                  <p>We have high standards <br> for emails too.</p>
-              </div>
-          <div class="right-side">
-              <div>
-                  <input class="txt" type="email" placeholder="Enter your email" size="30" required > 
-                  <input class="btn" type="submit" value="Subscribe">
-              </div>
-              <div class="navbar">
-                  <p><a href="https://www.facebook.com/">
-                      <img class="first-image" src="../static/icons/facebook.jpg" style="width: 100%;
-                      height: 40px;
-                      border-radius: 50%;
-                      box-shadow: 1px 1px 10px rgb(31, 31, 225);">
-                  </a></p>
-                  <p><a href="https://www.instagram.com/">
-                      <img class="second-image" src="../static/icons/instagram.jpg" style="width: 100%;
-                      height: 40px;
-                      border-radius: 50%;
-                      box-shadow: 1px 1px 10px rgb(255, 50, 200);">
-                  </a></p>
-                  <p><a href="https://www.twitter.com/">
-                      <img class="third-image" src="../static/icons/twitter.png" style="width: 100%;
-                      height: 40px;
-                      border-radius: 50%;
-                      box-shadow: 1px 1px 10px rgb(37, 168, 249);">
-                  </a></p>
-                  <p><a href="https://www.youtube.com/">
-                      <img class="four-image" src="../static/icons/youtube.png" style="width: 100%;
-                      height: 40px;
-                      border-radius: 12px;
-                      box-shadow: 1px 1px 10px rgb(250, 43, 43);"></p>
-                  </a>
-              </div>
-          </div>
-      </div>
-  </section>
+        <div class="five-page">
+            <div class="upper-side">
+                <h1>Your feedback is important to us!</h1>
+                <div class="down-part">
+                    <div class="first-box">
+                        <div class="para1">    
+                            <!--  comment section is pending to add comment ,name photo  -->
+                            <p>Usually when I get a cookbook or magazine, I am only interested in a few of the recipes. Either they don't fit my diet or tastes, but I could see myself making most of these. I also appreciate that the recipes are explained well.</p>
+                        </div>
+                        <div class="photo1-section">
+                            <img src="static/icons/review-pic1.jpg" >
+                            <p>Linda M</p>
+                        </div>
+                    </div>
+                    <div class="second-box">
+                        <div class="para2">
+                            <p>I like Allrecipes magazine, and have made several of the recipes in the issues. I decided to try the kindle version on trial subscription and get subscription later. I love my kindle for reading books, but did not like having the magazine on it.</p>
+                        </div>
+                        <div class="photo2-section">
+                            <img src="static/icons/review-pic2.jpg">
+                            <p>Darling Nikki</p>
+                        </div>
+                    </div>
+                    <div class="third-box">
+                        <div class="para3">
+                            <p>This is one of my favorite food magazines. I have bought so many issues twice, I started taking pictures of the cover so I won't buy it again. As a matter of fact, even though I have this last issue in my newsstand, I accidentally purchased a hard copy.</p>
+                        </div>
+                        <div class="photo3-section">
+                            <img src="static/icons/review-pic3.jpg">
+                            <p>Viki Lee Butler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-side">
+                    <div class="left-side">
+                        <p>We have high standards <br> for emails too.</p>
+                    </div>
+                <div class="right-side">
+                    <div> 
+                        <a href="signup/">
+                            <input class="btn" type="submit" value="Subscribe">
+                        </a>
+                    </div>
+                    <div class="navbar">
+                        <p><a href="https://www.facebook.com/">
+                            <img class="first-image" src="static/icons/facebook.jpg" style="width: 100%;
+                            height: 40px;
+                            border-radius: 50%;
+                            box-shadow: 1px 1px 10px rgb(31, 31, 225);">
+                        </a></p>
+                        <p><a href="https://www.instagram.com/">
+                            <img class="second-image" src="static/icons/instagram.jpg" style="width: 100%;
+                            height: 40px;
+                            border-radius: 50%;
+                            box-shadow: 1px 1px 10px rgb(255, 50, 200);">
+                        </a></p>
+                        <p><a href="https://www.tweeter.com/">
+                            <img class="third-image" src="static/icons/twitter.png" style="width: 100%;
+                            height: 40px;
+                            border-radius: 50%;
+                            box-shadow: 1px 1px 10px rgb(37, 168, 249);">
+                        </a></p>
+                        <p><a href="https://www.youtube.com/">
+                            <img class="four-image" src="static/icons/youtube.png" style="width: 100%;
+                            height: 40px;
+                            border-radius: 12px;
+                            box-shadow: 1px 1px 10px rgb(250, 43, 43);"></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
 
   </div>
 
-  <script src="{% static 'script.js' %}"></script>
+  <script src="{% static 'java-meal.js' %}"></script>
+  <script src="{% static 'java-drinks.js' %}"></script>
   <!--Next two lines are for using the flicketry Plugin for carousel-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
