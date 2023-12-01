@@ -1,8 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-# import the mysql connector library
-
-# establish mysql connection
+from mainFiles.models import User
 
 # Create your views here.
 
@@ -11,16 +9,14 @@ def home(request):
 
 def signup(request):
     if request.method == 'POST':
-        username = request.POST.get('fname')
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
         email = request.POST.get('email')
-        print(username)
-        print(email)
+        city = request.POST.get('city')
+        state = request.POST.get('state')
 
-        # concatenate fname and lname into name
-
-        # create a database if it doesn't exist already using a if block
-
-        # mysql query execution using another function which will insert the values into the mysql database
+        user = User(FirstName=fname, LastName=lname, Email=email, City=city, State=state)
+        user.save()
 
         return redirect('home')
     

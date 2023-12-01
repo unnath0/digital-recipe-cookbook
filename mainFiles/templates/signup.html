@@ -53,15 +53,15 @@
         <form action="" method="post">
             {% csrf_token %}
             <label for="fname">First Name : </label>
-            <input type="text" name="fname" required><br><br>
+            <input id="fname" type="text" name="fname" required><br><br>
             <label for="lname">Last Name : </label>
-            <input type="text" name="lname"><br><br>
+            <input id="lname" type="text" name="lname"><br><br>
             <label for="email">Email : </label>
-            <input type="email" name="email" placeholder="eg:kumarineha9234.@gmail" required><br><br>
+            <input id="email" type="email" name="email" placeholder="eg:kumarineha9234.@gmail" required><br><br>
             <label for="city">City : </label>
-            <input type="text" name="city" ><br><br>
+            <input id="city" type="text" name="city" ><br><br>
             <label for="state">State : </label>
-            <input type="text" name="state" ><br><br>
+            <input id="state" type="text" name="state" ><br><br>
             <button type="submit" value="OK">Submit</button>
         </form>
     </div>
