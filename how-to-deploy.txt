@@ -1,0 +1,34 @@
+pythonanywhere is used deployment. You can reference this github repo for project structure
+
+1. create account in pythonanywhere.com
+2. open up a console in pythonanywhere
+3. clone the github repo
+4. make a virtual environment with the command "mkvirtualenv --python=/usr/bin/python=3.9 venv"
+5. pip install the requirements either using requirements.txt file or manually
+6. in the pythonanywhere dashboard go to web app and create a new web app
+7. click next for default domain and then click manual configuration
+8. choose python 3.9
+9. go to the virtualenv section of the page and enter venv in the field
+10. right above this section should be code section. Click on wsgi configuration file
+11. you can remove everything in there except the django section
+12. uncomment the code part of the django section
+13. Change the value of path variable to the path of your project. You can get the project path by going to pythonanywhere console and cd into your project that cloned before. Then type pwd and press enter, this will give you the path
+14. In the line os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings', change mysite to the directory which contains the settings.py file in your project
+15. Go to pythonanywhere dashboard and go to files. From here navigate to the directory that contains your project settings.py file
+16. Click on settings.py file to edit it.
+17. In the ALLOWED_HOSTS = []. Inside the brackets, add the domain name. For exampe, ALLOWED_HOSTS = ['unnath.pythonanywhere.com']. Or you could also put * instead which allows anyone to access the site, not recommended.
+18. Also change debug from true to false
+
+For static files like images and css
+
+19. In settings.py have the following or something similar:
+
+STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+20. run 'python manage.py collectstatic' which will make staticfiles folder in project root directory
+21. Go to pythonanywhere dashboard and go to web app and scroll down to static files section
+22. For the url enter the url in STATIC_URL. And for path enter the path of the staticfiles. For this you can go to pythonanywhere console and navigate to project staticfiles directory and do pwd to get full path. Enter this path in the path section of static files section of the web app
