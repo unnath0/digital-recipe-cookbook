@@ -4,7 +4,7 @@
         "builder": "NIXPACKS"
     },
     "deploy": {
-        "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && python manage.py runserver",
+        "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn digitalRecipeCookbook.wsgi:application --bind 127.0.0.1:8000",
         "restartPolicyType": "ON_FAILURE",
         "restartPolicyMaxRetries": 10
     }
